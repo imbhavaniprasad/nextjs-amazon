@@ -9,3 +9,10 @@
 //console.log(Math.round((1.005 + Number.EPSILON) * 100) / 100); // Output: 1.01
 
 export const round2 = (num: number) => Math.round((num + Number.EPSILON) * 100) / 100
+
+export function convertDocToObj(doc: any) {
+    doc._id = doc._id.toString()
+    doc.createdAt = doc.createdAt.toString()
+    doc.updatedAt = doc.updatedAt.toString()
+    return doc
+}
